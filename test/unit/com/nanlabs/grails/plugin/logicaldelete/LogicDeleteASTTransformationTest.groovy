@@ -13,7 +13,7 @@ class LogicalDeleteASTTransformationTest {
 		def invoker = new TransformTestHelper(new LogicalDeleteASTTRansformation(), CompilePhase.CANONICALIZATION)
 		def clazz = invoker.parse(file)
 		def test = clazz.newInstance()
-		test.deleted = true
+		test.deleted = new Date()
 		assert test.deleted
 	}
 

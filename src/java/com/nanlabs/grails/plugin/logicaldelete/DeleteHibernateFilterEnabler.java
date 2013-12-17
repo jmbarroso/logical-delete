@@ -21,4 +21,10 @@ public class DeleteHibernateFilterEnabler {
 	public void setDeleteHibernateFilter(FilterDefinition deleteHibernateFilter) {
 		this.deleteHibernateFilter = deleteHibernateFilter;
 	}
+
+    public void disableDeleteHibernateFilter(Session session){
+        session.enableFilter(deleteHibernateFilter.getFilterName());
+    }
+
+
 }

@@ -1,8 +1,10 @@
 package com.nanlabs.grails.plugin.logicaldelete;
 
+import java.util.Date;
+
 public interface LogicalDeleteDomainClass {
 
-	Boolean getDeleted();
+	Date getDeleted();
 
-	void setDeleted(Boolean deleted);
+	void setDeleted(Date deleted);
 }
